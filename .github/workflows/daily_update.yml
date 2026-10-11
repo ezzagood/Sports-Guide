@@ -1,4 +1,4 @@
-      name: Daily Sports Schedule Update
+name: Daily Sports Schedule Update
 
 on:
   schedule:
