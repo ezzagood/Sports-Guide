@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Australian Live Sports Schedule (3-Day Ahead)</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f4f6f8; margin: 0; padding: 20px; color: #333; }
+    .container { max-width: 900px; margin: 0 auto; }
+    header { background: #002b49; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; text-align: center; }
+    h1 { margin: 0; font-size: 24px; }
+    p.subtitle { margin: 5px 0 0; opacity: 0.8; font-size: 14px; }
+    .day-card { background: white; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+    .day-title { border-bottom: 2px solid #0056b3; padding-bottom: 8px; font-size: 18px; color: #0056b3; margin-top: 0; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { text-align: left; padding: 10px; border-bottom: 1px solid #eee; }
+    th { background: #f8f9fa; font-weight: 600; }
+    .channel-badge { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; color: white; }
+    .kayo { background-color: #00a651; }
+    .stan { background-color: #0066ff; }
+    .espn { background-color: #cc0000; }
+    .bein { background-color: #6e2585; }
+    .optus { background-color: #008080; }
+    .foxtel { background-color: #ff6600; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🇦🇺 Australian Sports Broadcast Schedule</h1>
+      <p class="subtitle">Auto-updating 3-Day Live Guide (AEDT/AEST)</p>
+      <small id="last-updated"></small>
+    </header>
+
+    <div id="schedule-container">Loading schedule...</div>
+  </div>
+
+  <script>
+    async function loadSchedule() {
+      try {
+        const response = await fetch('schedule.json');
+        const data = await response.json();
+        
+        document.getElementById('last-updated').textContent = 'Last Updated: ' + data.last_updated;
+        
+        let html = '';
+        data.days.forEach(day => {
+          html += `<div class="day-card"><h2 class="day-title">${day.date}</h2>`;
+          html += `<table><thead><tr><th>Time</th><th>Match / Event</th><th>Competition</th><th>Channel</th></tr></thead><tbody>`;
+          
+          day.events.forEach(evt => {
+            const channelClass = evt.channel.toLowerCase().replace(/\s+/g, '');
+            html += `<tr>
+              <td><strong>${evt.time}</strong></td>
+              <td>${evt.event}</td>
+              <td>${evt.league}</td>
+              <td><span class="channel-badge ${channelClass}">${evt.channel}</span></td>
+            </tr>`;
+          });
+          
+          html += `</tbody></table></div>`;
+        });
+        
+        document.getElementById('schedule-container').innerHTML = html;
+      } catch (err) {
+        document.getElementById('schedule-container').innerHTML = '<p>Failed to load sports schedule. Check back shortly.</p>';
+      }
+    }
+    loadSchedule();
+  </script>
+</body>
+</html>
