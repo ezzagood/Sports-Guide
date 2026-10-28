@@ -1,51 +1,16 @@
 {
-  "last_updated": "2026-10-27 02:31 UTC",
+  "last_updated": "2026-10-28 02:39 UTC",
   "days": [
-    {
-      "date": "Tuesday, Oct 27",
-      "events": [
-        {
-          "time": "14:00 AEST",
-          "sport": "Motorsport",
-          "event": "Supercars Bathurst 1000",
-          "channel": "Kayo / Fox Sports"
-        },
-        {
-          "time": "16:30 AEST",
-          "sport": "Basketball",
-          "event": "NBL: Sydney Kings vs Melbourne United",
-          "channel": "Kayo / Fox Sports"
-        },
-        {
-          "time": "18:00 AEST",
-          "sport": "Football",
-          "event": "Premier League Matchday Live",
-          "channel": "Optus Sport"
-        },
-        {
-          "time": "20:15 AEST",
-          "sport": "Rugby Union",
-          "event": "The Rugby Championship",
-          "channel": "Stan Sport"
-        },
-        {
-          "time": "22:00 AEST",
-          "sport": "Tennis",
-          "event": "ATP Tour Match",
-          "channel": "beIN Sports"
-        },
-        {
-          "time": "08:00 AEST",
-          "sport": "Baseball",
-          "event": "MLB Regular Season",
-          "channel": "ESPN"
-        }
-      ]
-    },
     {
       "date": "Wednesday, Oct 28",
       "events": [
         {
+          "time": "14:00 AEST",
+          "sport": "Motorsport",
+          "event": "Supercars Bathurst 1000",
+          "channel": "Kayo / Fox Sports"
+        },
+        {
           "time": "16:30 AEST",
           "sport": "Basketball",
           "event": "NBL: Sydney Kings vs Melbourne United",
@@ -74,17 +39,52 @@
           "sport": "Baseball",
           "event": "MLB Regular Season",
           "channel": "ESPN"
-        },
-        {
-          "time": "14:00 AEST",
-          "sport": "Motorsport",
-          "event": "Supercars Bathurst 1000",
-          "channel": "Kayo / Fox Sports"
         }
       ]
     },
     {
       "date": "Thursday, Oct 29",
+      "events": [
+        {
+          "time": "16:30 AEST",
+          "sport": "Basketball",
+          "event": "NBL: Sydney Kings vs Melbourne United",
+          "channel": "Kayo / Fox Sports"
+        },
+        {
+          "time": "18:00 AEST",
+          "sport": "Football",
+          "event": "Premier League Matchday Live",
+          "channel": "Optus Sport"
+        },
+        {
+          "time": "20:15 AEST",
+          "sport": "Rugby Union",
+          "event": "The Rugby Championship",
+          "channel": "Stan Sport"
+        },
+        {
+          "time": "22:00 AEST",
+          "sport": "Tennis",
+          "event": "ATP Tour Match",
+          "channel": "beIN Sports"
+        },
+        {
+          "time": "08:00 AEST",
+          "sport": "Baseball",
+          "event": "MLB Regular Season",
+          "channel": "ESPN"
+        },
+        {
+          "time": "14:00 AEST",
+          "sport": "Motorsport",
+          "event": "Supercars Bathurst 1000",
+          "channel": "Kayo / Fox Sports"
+        }
+      ]
+    },
+    {
+      "date": "Friday, Oct 30",
       "events": [
         {
           "time": "18:00 AEST",
